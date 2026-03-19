@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Employee Form</title>
+<link rel="stylesheet" type="text/css" href="meet.css">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    overflow:hidden;
+    background:black;
+}
+
+/* 🔥 MIT Animated Background */
+.bg-text{
+    position:fixed;
+    width:200%;
+    height:200%;
+    display:flex;
+    flex-wrap:wrap;
+    transform: rotate(-30deg);
+    animation: move 25s linear infinite;
+    opacity:0.04;
+    z-index:0;
+}
+
+.bg-text span{
+    font-size:80px;
+    color:white;
+    margin:40px;
+}
+
+/* animation */
+@keyframes move{
+    from{
+        transform: translate(0,0) rotate(-30deg);
+    }
+    to{
+        transform: translate(-600px,-600px) rotate(-30deg);
+    }
+}
+
+/* Form container */
+.container{
+    position:relative;
+    z-index:2;
+    width:420px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+    padding:25px;
+    border-radius:15px;
+    margin:50px auto;
+    color:white;
+    box-shadow:0 0 30px rgba(0,0,0,0.5);
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+h2{
+    text-align:center;
+}
+
+.field{
+    position:relative;
+    margin:12px 0;
+}
+
+.field input, .field select{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:5px;
+    outline:none;
+}
+
+.field label{
+    position:absolute;
+    top:50%;
+    left:10px;
+    transform:translateY(-50%);
+    font-size:14px;
+    color:#ccc;
+    transition:0.3s;
+}
+
+.field input:focus + label,
+.field input:valid + label,
+.field select:focus + label{
+    top:-8px;
+    font-size:11px;
+    color:#00eaff;
+}
+
+.row{
+    display:flex;
+    gap:10px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#00eaff;
+    border:none;
+    color:black;
+    font-weight:bold;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#00c3cc;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- MIT Background -->
+<div class="bg-text" id="bgText"></div>
+
+<div class="container">
+<h2>Employee Registration</h2>
+
+<form>
+
+<div class="field">
+<input type="text" required>
+<label>Full Name</label>
+</div>
+
+<div class="row">
+<div class="field">
+<input type="email" required>
+<label>Email</label>
+</div>
+
+<div class="field">
+<input type="tel" required>
+<label>Phone</label>
+</div>
+</div>
+
+<div class="field">
+<input type="text" required>
+<label>Employee ID</label>
+</div>
+
+<div class="field">
+<select required>
+<option value=""></option>
+<option>Developer</option>
+<option>Designer</option>
+<option>HR</option>
+<option>Manager</option>
+</select>
+<label>Department</label>
+</div>
+
+<div class="field">
+<select required>
+<option value=""></option>
+<option>Junior</option>
+<option>Mid Level</option>
+<option>Senior</option>
+</select>
+<label>Position Level</label>
+</div>
+
+<div class="field">
+<input type="date" required>
+<label>Joining Date</label>
+</div>
+
+<div class="field">
+<input type="number" required>
+<label>Salary</label>
+</div>
+
+<div class="field">
+<input type="text">
+<label>Address</label>
+</div>
+
+<div class="field">
+<input type="file">
+<label>Upload Resume</label>
+</div>
+
+<button>Submit</button>
+
+</form>
+</div>
+
+<script>
+
+
+
+</body>
+</html>
